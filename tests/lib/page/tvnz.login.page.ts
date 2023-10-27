@@ -19,12 +19,12 @@ export class TVNZplusPage {
     this.email = page.getByLabel('Email address');
     this.password =  page.getByLabel('PasswordShow Password');
     this.buttonLogin = page.getByRole('button', { name: 'Login' });
-    this.linkProfile =  page.getByRole('link', { name: 'Eric Eric' });
-    this.menuProfile = page.locator('#User-dropdown').getByText('Eric')
-    this.linkSport = page.locator('#Sport > div.SiteNav-item--title > a')
+    this.linkProfile =  page.locator('div.profile-avatar__image-container');
+    this.menuProfile = page.locator('#User-dropdown');
+    this.linkSport = page.locator('#Sport > div.SiteNav-item--title > a');
     
-    this.currebtTimeVideo = page.locator(':nth-match(span.vjs-current-time-display,2)')
-    this.closeVideo = page.locator('a').filter({ hasText: 'Close Video' })
+    this.currebtTimeVideo = page.locator(':nth-match(span.vjs-current-time-display,2)');
+    this.closeVideo = page.locator('a').filter({ hasText: 'Close Video' });
 
   }
 
